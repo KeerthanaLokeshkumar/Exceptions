@@ -1,0 +1,79 @@
+package com.exceptions.keerthana;
+import java.util.Scanner;
+
+public class Exception {
+	public static void main(String args[]) {
+	
+	Scanner sc = new Scanner(System.in);
+
+System.out.println("Enter  numbers for the purpose of operation:...");
+
+int firstNumber = sc.nextInt();
+
+int secondNumber = sc.nextInt();
+//int thirdNumber = theScan.nextInt();
+
+Exception ex=new Exception();
+ex.modulo(firstNumber,secondNumber);
+ex.addition(firstNumber, secondNumber);
+ex.divideNumbers(firstNumber, secondNumber);
+ex. subtraction(firstNumber, secondNumber);
+
+}
+
+void modulo(int firstNumber, int secondNumber) {
+
+int result = 0;
+try {
+result = firstNumber  % secondNumber ;
+System.out.println("Modulo is : " + result);
+}
+catch(ArithmeticException ae) 
+	{
+	System.out.println("Sorry...");
+}
+}
+
+
+
+
+void addition(int firstNumber, int secondNumber) {
+
+int result = 0;
+try {
+result = firstNumber +secondNumber;
+System.out.println("Addition is : " + result);
+}
+catch(ArithmeticException ae) {
+System.out.println("Sorry...");
+}
+
+
+}
+void divideNumbers(int firstNumber, int secondNumber) {
+
+int result = 0;
+try {
+result = firstNumber / secondNumber;
+System.out.println("Division is : " + result);
+}
+catch(ArithmeticException ae) {
+System.out.println("Sorry, division by zero not defined yet...");
+}
+
+
+}
+void subtraction(int firstNumber, int secondNumber) {
+
+int result = 0;
+try {
+result = firstNumber - secondNumber;
+System.out.println("subtraction is : " + result);
+}
+catch(ArithmeticException ae) {
+System.out.println("Sorry...");
+}
+}
+
+
+}
